@@ -57,6 +57,72 @@ export default function Home() {
   return (
     <>
       <section className='py-6 dark:bg-gray-950'>
+        <nav className="flex justify-center py-4">
+          <div className="w-full max-w-5xl px-4">
+            <div className="flex items-start justify-between relative">
+              <div className="flex flex-col items-center w-full">
+
+                <div className="bg-blue-600 text-white p-4 rounded-full mb-2">
+                  <i className="fa-solid fa-location-dot"></i>
+                </div>
+                <div className="text-center font-semibold">
+                  <p className='dark:text-gray-50' >Location</p>
+                  <p className="text-sm text-gray-500">Choose address</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center w-full">
+                <div className="bg-blue-600 text-white p-4 rounded-full mb-2">
+                  <i className="fa-solid fa-trash-can"></i>
+                </div>
+                <div className="text-center font-semibold">
+                  <p className='dark:text-gray-50' >Waste Type</p>
+                  <p className="text-sm text-gray-500">Select waste</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center w-full">
+                <div className="bg-blue-600 text-white p-4 rounded-full mb-2">
+                  <i className="fa-solid fa-truck-moving"></i>
+                </div>
+                <div className="text-center font-semibold">
+                  <p className='dark:text-gray-50' >Delivery</p>
+                  <p className="text-sm text-gray-500">Truck on the way</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center w-full opacity-50">
+                <div className="bg-gray-300 text-gray-500 p-4 rounded-full mb-2">
+                  <i className="fa-solid fa-shield"></i>
+                </div>
+                <div className="text-center font-semibold">
+                  <p className='dark:text-gray-50' >Safety</p>
+                  <p className="text-sm text-gray-400">Confirm safety</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center w-full opacity-50">
+                <div className="bg-gray-300 text-gray-500 p-4 rounded-full mb-2">
+                  <i className="fa-solid fa-calendar"></i>
+                </div>
+                <div className="text-center font-semibold">
+                  <p className='dark:text-gray-50' >Schedule</p>
+                  <p className="text-sm text-gray-400">Pick date</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center w-full opacity-50">
+                <div className="bg-gray-300 text-gray-500 p-4 rounded-full mb-2">
+                  <i className="fa-regular fa-credit-card"></i>
+                </div>
+                <div className="text-center font-semibold">
+                  <p className='dark:text-gray-50' >Payment</p>
+                  <p className="text-sm text-gray-400">Complete payment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
         <div className='flex flex-col items-center gap-4'>
           <h1 className='text-xl font-extrabold dark:text-gray-50'>Choose Your Skip Size</h1>
           <h1 className='dark:text-gray-50'>Select the skip size that best suits your needs</h1>
@@ -82,7 +148,7 @@ export default function Home() {
 
                   {!bin.allowed_on_road && (
                     <div className="absolute top-2 right-2 bg-yellow-300 text-gray-950 text-xs font-bold px-2 py-1 rounded">
-                      Not Allowed On The Road 
+                      Not Allowed On The Road
                     </div>
                   )}
                 </div>
