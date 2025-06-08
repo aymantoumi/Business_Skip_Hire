@@ -1,42 +1,44 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This interface is built using **React** and **TypeScript** for fast, minimal deployment, with **TailwindCSS** providing elegant styling.
 
-Currently, two official plugins are available:
+Using the provided API, I have successfully fetched bin/skip data and implemented a simple, minimal design that allows users to easily interact with the application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Fetches skip/bin data from an external API.
+- Displays available skips in a responsive grid layout.
+- Allows users to select/deselect a skip and view their selection in a floating panel.
+- Dynamic image loading based on skip size.
+- Highlights special conditions like road placement availability.
+Rather than reinventing the wheel, I took inspiration from some of the leading online marketplaces to craft an attractive and engaging design. The goal was to create an interface that users would enjoy interacting with one that feels intuitive and even fun to explore. By enhancing the user experience, the design encourages users to spend more time browsing, which in turn increases the likelihood of conversion and repeat engagement.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Easy Deployment on Your Local Machine
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+If you want to try it on your machine, you'll need to clone the repository:
+
+```bash
+git clone git@github.com:aymantoumi/Business_Skip_Hire.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then install dependencies and run the development server:
+
+```bash
+cd Business_Skip_Hire
+npm install
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` (or another port if taken).
+
+## Linting with ESLint
+
+You can also install [`eslint-plugin-react-x`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [`eslint-plugin-react-dom`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
 
 export default tseslint.config({
   plugins: {
@@ -50,5 +52,7 @@ export default tseslint.config({
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
-})
+});
 ```
+
+These plugins help enforce best practices and improve code quality when working with React and TypeScript.
